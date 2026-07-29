@@ -161,5 +161,43 @@
     "unit_price_approved": 145.0,
     "approver": "R. Osei",
     "po_date": "2024-03-18"
+  },
+  {
+    "po_number": "PO-2024-1110",
+    "vendor_id": "VEND-1001",
+    "item_description": "Grade-A Steel Brackets",
+    "quantity_approved": 300,
+    "unit_price_approved": 38.0,
+    "approver": "J. Alvarez",
+    "po_date": "2024-04-10",
+    "note": "Test case: invoice bills at exactly the 3% COLA ceiling ($39.14) to verify the tolerance boundary is treated as clean, not PRICE_INFLATION."
+  },
+  {
+    "po_number": "PO-2024-1206",
+    "vendor_id": "VEND-1002",
+    "item_description": "Industrial Bolts (M12)",
+    "quantity_approved": 4000,
+    "unit_price_approved": 2.15,
+    "approver": "M. Chen",
+    "po_date": "2024-04-05",
+    "note": "Test case: legitimate partial shipment against one PO, invoiced in two parts (INV-2024-9101/9102) - verifies SPLIT_INVOICING does not fire on same-PO partials."
+  },
+  {
+    "po_number": "PO-2024-1207",
+    "vendor_id": "VEND-1002",
+    "item_description": "Industrial Bolts (M12)",
+    "quantity_approved": 1600,
+    "unit_price_approved": 2.0,
+    "approver": "M. Chen",
+    "po_date": "2024-04-12"
+  },
+  {
+    "po_number": "PO-2024-1306",
+    "vendor_id": "VEND-1003",
+    "item_description": "Sensor Assembly (Standard)",
+    "quantity_approved": 30,
+    "unit_price_approved": 62.5,
+    "approver": "R. Osei",
+    "po_date": "2024-04-08"
   }
 ]

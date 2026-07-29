@@ -98,5 +98,38 @@
     "delivery_date": "2024-03-20",
     "signed_by": "Dock - A. Kim",
     "inspection_confirmed": true
+  },
+  {
+    "po_number": "PO-2024-1110",
+    "quantity_delivered": 300,
+    "delivery_date": "2024-04-15",
+    "signed_by": "Dock - T. Reyes"
+  },
+  {
+    "po_number": "PO-2024-1206",
+    "quantity_delivered": 2000,
+    "delivery_date": "2024-04-08",
+    "signed_by": "Dock - L. Park",
+    "note": "Partial shipment 1 of 2 against PO-2024-1206."
+  },
+  {
+    "po_number": "PO-2024-1206",
+    "quantity_delivered": 2000,
+    "delivery_date": "2024-04-12",
+    "signed_by": "Dock - L. Park",
+    "note": "Partial shipment 2 of 2 against PO-2024-1206 - each partial shipment has its own delivery confirmation, per Boltcraft contract Section 5."
+  },
+  {
+    "po_number": "PO-2024-1207",
+    "quantity_delivered": 1600,
+    "delivery_date": "2024-04-13",
+    "signed_by": "Dock - L. Park"
+  },
+  {
+    "po_number": "PO-2024-1306",
+    "quantity_delivered": 30,
+    "delivery_date": "2024-04-12",
+    "signed_by": "Dock - A. Kim",
+    "inspection_confirmed": true
   }
 ]

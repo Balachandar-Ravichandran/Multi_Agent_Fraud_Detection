@@ -138,5 +138,47 @@
     "expected_flag": true,
     "invoice_amount": 2400.0,
     "ground_truth_notes": "Invoice matches PO exactly (no invoice-vs-PO anomaly), but PO itself was raised at $2.40/unit, above the $2.15 contract ceiling."
+  },
+  {
+    "invoice_id": "INV-2024-9101",
+    "expected_fraud_type": "CLEAN",
+    "expected_flag": false,
+    "invoice_amount": 4300.0,
+    "ground_truth_notes": "Legitimate first partial shipment against PO-2024-1206. Qty, price, delivery, vendor all match."
+  },
+  {
+    "invoice_id": "INV-2024-9102",
+    "expected_fraud_type": "DUPLICATE_BILLING",
+    "expected_flag": true,
+    "invoice_amount": 4300.0,
+    "ground_truth_notes": "Different invoice number, but identical vendor+PO+amount to INV-2024-9101, submitted 4 days later."
+  },
+  {
+    "invoice_id": "INV-2024-9103",
+    "expected_fraud_type": "PRICE_INFLATION",
+    "expected_flag": true,
+    "invoice_amount": 11742.0,
+    "ground_truth_notes": "Boundary test: invoiced at $39.14/unit, which is exactly the 3% COLA allowance above the $38 contract ceiling ($38 * 1.03 = $39.14). Should flag as PRICE_INFLATION, not CLEAN."
+  },
+  {
+    "invoice_id": "INV-2024-9104",
+    "expected_fraud_type": "CLEAN",
+    "expected_flag": false,
+    "invoice_amount": 3200.0,
+    "ground_truth_notes": "Legitimate separate PO. Qty, price, delivery all match."
+  },
+  {
+    "invoice_id": "INV-2024-9105",
+    "expected_fraud_type": "CLEAN",
+    "expected_flag": false,
+    "invoice_amount": 1875.0,
+    "ground_truth_notes": "Legitimate original invoice. Already marked 'paid' in invoice_tracking.json before INV-2024-9106 arrives."
+  },
+  {
+    "invoice_id": "INV-2024-9106",
+    "expected_fraud_type": "DUPLICATE_BILLING",
+    "expected_flag": true,
+    "invoice_amount": 1875.0,
+    "ground_truth_notes": "Different invoice number, but identical vendor+PO+amount to INV-2024-9105, submitted 4 days later."
   }
 ]

@@ -158,5 +158,53 @@
     "amount": 2400.0,
     "date_received": "2024-04-03",
     "status": "pending_review"
+  },
+  {
+    "invoice_id": "INV-2024-9101",
+    "vendor_id": "VEND-1002",
+    "po_reference": "PO-2024-1206",
+    "amount": 4300.0,
+    "date_received": "2024-04-09",
+    "status": "pending_review"
+  },
+  {
+    "invoice_id": "INV-2024-9102",
+    "vendor_id": "VEND-1002",
+    "po_reference": "PO-2024-1206",
+    "amount": 4300.0,
+    "date_received": "2024-04-13",
+    "status": "pending_review"
+  },
+  {
+    "invoice_id": "INV-2024-9103",
+    "vendor_id": "VEND-1001",
+    "po_reference": "PO-2024-1110",
+    "amount": 11742.0,
+    "date_received": "2024-04-16",
+    "status": "pending_review"
+  },
+  {
+    "invoice_id": "INV-2024-9104",
+    "vendor_id": "VEND-1002",
+    "po_reference": "PO-2024-1207",
+    "amount": 3200.0,
+    "date_received": "2024-04-14",
+    "status": "pending_review"
+  },
+  {
+    "invoice_id": "INV-2024-9105",
+    "vendor_id": "VEND-1003",
+    "po_reference": "PO-2024-1306",
+    "amount": 1875.0,
+    "date_received": "2024-04-13",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-2024-9106",
+    "vendor_id": "VEND-1003",
+    "po_reference": "PO-2024-1306",
+    "amount": 1875.0,
+    "date_received": "2024-04-17",
+    "status": "pending_review"
   }
 ]
