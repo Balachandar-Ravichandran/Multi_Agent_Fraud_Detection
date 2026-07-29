@@ -16,14 +16,8 @@ from __future__ import annotations
 
 from core.events import emit
 from core.llm import HAIKU_MODEL, call
+from core.prompts import NARRATIVE_GENERATION
 from core.schemas import CheckJobResult, FraudReport
-
-NARRATIVE_SYSTEM_PROMPT = (
-    "Write a 2-4 sentence, plain-English explanation of this fraud-audit "
-    "finding for a finance reviewer. State only facts present in the "
-    "report below -- never add a claim that isn't already there. If the "
-    "invoice is CLEAN, say so plainly and briefly."
-)
 
 
 def _format_checks(job_results: list[CheckJobResult]) -> str:
@@ -60,7 +54,7 @@ def generate(
         f"confidence {report.confidence if report.confidence is not None else 'n/a'}.\n"
         f"Evidence:\n{_format_evidence(report)}"
     )
-    narrative = call(HAIKU_MODEL, "low", NARRATIVE_SYSTEM_PROMPT, narrative_context).strip()
+    narrative = call(HAIKU_MODEL, "low", NARRATIVE_GENERATION, narrative_context).strip()
 
     message = (
         f"INVOICE {invoice_id} — {vendor_name} — ${amount:,.2f}\n"

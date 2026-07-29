@@ -22,6 +22,7 @@ from __future__ import annotations
 
 from core.events import emit
 from core.llm import HAIKU_MODEL, call
+from core.prompts import GATE_POST_CLASSIFICATION, GATE_POST_FINDING, GATE_POST_PLAN, GATE_POST_RAG, GATE_POST_STORAGE, GATE_POST_SUMMARY, GATE_QA_GROUNDING
 from core.schemas import ValidationResult
 
 # Section 9's table, column "Cap".
@@ -47,49 +48,13 @@ GATE_EVENTS: dict[str, tuple[str, tuple[str, str]]] = {
 }
 
 GATE_SYSTEM_PROMPTS: dict[str, str] = {
-    "post_plan": (
-        "You judge whether a fraud-audit job plan is sane and complete "
-        "(Audit Mode must include all 7 fixed checks; Q&A Mode's plan must "
-        "actually address the user's question). Respond PASS or FAIL on "
-        "the first line, then a one-sentence reason."
-    ),
-    "post_rag": (
-        "You judge whether a retrieved contract clause is relevant to the "
-        "item/vendor in question and comes from a plausible contract "
-        "section. Respond PASS or FAIL on the first line, then a "
-        "one-sentence reason."
-    ),
-    "post_storage": (
-        "You judge whether a database query executed successfully and "
-        "returned data of the expected shape (not whether the result is "
-        "favorable). Respond PASS or FAIL on the first line, then a "
-        "one-sentence reason."
-    ),
-    "post_finding": (
-        "You judge whether a fraud-check finding is well-supported by its "
-        "own cited evidence. Respond PASS or FAIL on the first line, then "
-        "a one-sentence reason."
-    ),
-    "post_classification": (
-        "You judge whether every claim in a fraud report is backed by a "
-        "citation to real evidence. If fraud_type is CLEAN and evidence is "
-        "empty, that is expected, not a defect: a clean verdict asserts "
-        "only that no anomaly was found among the check results given in "
-        "context, which requires no citation of its own. Respond PASS in "
-        "that case unless the context itself contradicts the CLEAN "
-        "verdict (e.g. an anomalous check result is present). Respond PASS "
-        "or FAIL on the first line, then a one-sentence reason."
-    ),
-    "post_summary": (
-        "You judge whether a narrative summary is faithful to the "
-        "structured report it describes -- no unsupported claims added. "
-        "Respond PASS or FAIL on the first line, then a one-sentence reason."
-    ),
-    "qa_grounding": (
-        "You judge whether every claim in a Q&A answer traces to a "
-        "citation. Respond PASS or FAIL on the first line, then a "
-        "one-sentence reason."
-    ),
+    "post_plan": GATE_POST_PLAN,
+    "post_rag": GATE_POST_RAG,
+    "post_storage": GATE_POST_STORAGE,
+    "post_finding": GATE_POST_FINDING,
+    "post_classification": GATE_POST_CLASSIFICATION,
+    "post_summary": GATE_POST_SUMMARY,
+    "qa_grounding": GATE_QA_GROUNDING,
 }
 
 

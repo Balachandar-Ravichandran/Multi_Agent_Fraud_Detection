@@ -13,13 +13,8 @@ from __future__ import annotations
 
 from core.events import emit
 from core.llm import SONNET_MODEL, call
+from core.prompts import QA_PLAN
 from core.schemas import CHECK_NAMES
-
-QA_PLAN_SYSTEM_PROMPT = (
-    "Given a fraud case's conversation history and existing report, decide "
-    "what information is needed to answer the user's latest question. "
-    "Respond with exactly one word: RAG, STORAGE, BOTH, or NEITHER."
-)
 
 
 def create_audit_plan(run_id: str) -> list[str]:
@@ -32,7 +27,7 @@ def create_audit_plan(run_id: str) -> list[str]:
 def create_qa_plan(question: str, case_summary: str, conversation_history: list[dict], run_id: str) -> str:
     history_text = "\n".join(f"{h.get('role')}: {h.get('content')}" for h in conversation_history)
     prompt = f"Case summary:\n{case_summary}\n\nConversation so far:\n{history_text}\n\nLatest question:\n{question}"
-    tool_choice = call(SONNET_MODEL, "high", QA_PLAN_SYSTEM_PROMPT, prompt).strip().upper()
+    tool_choice = call(SONNET_MODEL, "high", QA_PLAN, prompt).strip().upper()
     emit("plan", "QA_PLAN_CREATED", run_id=run_id, question=question, tool_choice=tool_choice)
     return tool_choice
 

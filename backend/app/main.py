@@ -18,7 +18,7 @@ from orchestrator.graph import build_graph
 from orchestrator.state import GraphState
 from tools.invoice_pdf import extract_invoice_fields
 
-FRONTEND_DIR = Path(__file__).resolve().parent.parent / "frontend"
+FRONTEND_DIR = Path(__file__).resolve().parent.parent.parent / "frontend"
 
 app = FastAPI(title="Multi-Agent Procurement Fraud Detection")
 app.mount("/static", StaticFiles(directory=FRONTEND_DIR / "static"), name="static")
