@@ -98,6 +98,19 @@ def node_act_audit(state: GraphState) -> GraphState:
         if ledger_row:
             invoice = {**dict(ledger_row), **invoice}
 
+        # Ensure vendor_id is present (required by all checks). If not in ledger,
+        # look it up from vendor_master by PO reference, or use placeholder.
+        if "vendor_id" not in invoice and invoice.get("po_reference"):
+            po_ref = invoice["po_reference"]
+            po_row = conn.execute(
+                "SELECT vendor_id FROM purchase_orders WHERE po_number = ? LIMIT 1", (po_ref,)
+            ).fetchone()
+            if po_row:
+                invoice["vendor_id"] = po_row[0]
+
+        # Final fallback: use empty string (vendor_po_validity check will flag as PHANTOM_VENDOR)
+        invoice.setdefault("vendor_id", "")
+
         job_results = [module.run(conn, invoice, run_id=state["run_id"]) for module in CHECK_MODULES]
     finally:
         conn.close()
