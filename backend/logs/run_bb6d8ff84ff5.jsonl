@@ -1,0 +1,8 @@
+{"timestamp": "2026-07-29T17:50:28.880224+00:00", "category": "preconditions", "event": "INJECTION_CHECKED", "run_id": "bb6d8ff84ff5", "channel": "chat", "score": 0.0}
+{"timestamp": "2026-07-29T17:50:29.597580+00:00", "category": "preconditions", "event": "MODE_DETECTED", "run_id": "bb6d8ff84ff5", "mode": "follow_up", "invoice_id": "INV-2024-1001"}
+{"timestamp": "2026-07-29T17:50:29.601594+00:00", "category": "preconditions", "event": "PRECONDITIONS_PASSED", "run_id": "bb6d8ff84ff5", "mode": "follow_up", "invoice_id": "INV-2024-1001"}
+{"timestamp": "2026-07-29T17:50:30.869015+00:00", "category": "plan", "event": "QA_PLAN_CREATED", "run_id": "bb6d8ff84ff5", "question": "amazing so can i approve it", "tool_choice": "STORAGE"}
+{"timestamp": "2026-07-29T17:50:30.885249+00:00", "category": "act", "event": "QA_TOOL_SELECTED", "run_id": "bb6d8ff84ff5", "tool": "STORAGE"}
+{"timestamp": "2026-07-29T17:50:34.629013+00:00", "category": "summary", "event": "QA_GROUNDING_FAILED", "run_id": "bb6d8ff84ff5", "stage": "qa_grounding", "retry_count": 0, "reason": "The answer claims an invoice (INV-2024-1001) has been classified as \"CLEAN\" with \"low severity\" and provides a case report recommendation, but no citations provided contain information about any invoice classification, severity assessment, or fraud detection analysis."}
+{"timestamp": "2026-07-29T17:50:34.631015+00:00", "category": "summary", "event": "SUMMARY_GENERATED", "run_id": "bb6d8ff84ff5", "path": "qa"}
+{"timestamp": "2026-07-29T17:50:34.634012+00:00", "category": "summary", "event": "REPORT_FINALIZED", "run_id": "bb6d8ff84ff5", "invoice_id": "INV-2024-1001", "mode": "follow_up"}

@@ -1,0 +1,8 @@
+{"timestamp": "2026-07-29T17:52:54.608421+00:00", "category": "preconditions", "event": "INJECTION_CHECKED", "run_id": "3f76be651c58", "channel": "chat", "score": 0.0}
+{"timestamp": "2026-07-29T17:52:55.467813+00:00", "category": "preconditions", "event": "MODE_DETECTED", "run_id": "3f76be651c58", "mode": "follow_up", "invoice_id": "INV-2024-0842"}
+{"timestamp": "2026-07-29T17:52:55.472941+00:00", "category": "preconditions", "event": "PRECONDITIONS_PASSED", "run_id": "3f76be651c58", "mode": "follow_up", "invoice_id": "INV-2024-0842"}
+{"timestamp": "2026-07-29T17:52:58.313364+00:00", "category": "plan", "event": "QA_PLAN_CREATED", "run_id": "3f76be651c58", "question": "can i approve it ?", "tool_choice": "NEITHER"}
+{"timestamp": "2026-07-29T17:52:58.318252+00:00", "category": "act", "event": "QA_TOOL_SELECTED", "run_id": "3f76be651c58", "tool": "NEITHER"}
+{"timestamp": "2026-07-29T17:53:02.096014+00:00", "category": "summary", "event": "QA_GROUNDING_PASSED", "run_id": "3f76be651c58", "stage": "qa_grounding", "retry_count": 0, "reason": "All three claims in the answer trace to citations: the contract ceiling of $38.00 is cited from the apex_steel_contract, the PO approval of $38.00 is cited from PO-2024-1103, and the invoice billed amount of $42.50 is cited from INV-2024-0842."}
+{"timestamp": "2026-07-29T17:53:02.097017+00:00", "category": "summary", "event": "SUMMARY_GENERATED", "run_id": "3f76be651c58", "path": "qa"}
+{"timestamp": "2026-07-29T17:53:02.099550+00:00", "category": "summary", "event": "REPORT_FINALIZED", "run_id": "3f76be651c58", "invoice_id": "INV-2024-0842", "mode": "follow_up"}

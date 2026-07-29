@@ -1,0 +1,8 @@
+node_modules/
+.env
+__pycache__/
+backend/.venv/
+backend/fraud_system.db
+backend/chroma_db/
+backend/.pytest_cache/
+.claude/

@@ -1,0 +1,8 @@
+{"timestamp": "2026-07-29T17:03:45.351666+00:00", "category": "preconditions", "event": "INJECTION_CHECKED", "run_id": "a07f5a20bf18", "channel": "chat", "score": 0.0}
+{"timestamp": "2026-07-29T17:03:46.329232+00:00", "category": "preconditions", "event": "MODE_DETECTED", "run_id": "a07f5a20bf18", "mode": "follow_up", "invoice_id": "INV-2024-0842"}
+{"timestamp": "2026-07-29T17:03:46.332753+00:00", "category": "preconditions", "event": "PRECONDITIONS_PASSED", "run_id": "a07f5a20bf18", "mode": "follow_up", "invoice_id": "INV-2024-0842"}
+{"timestamp": "2026-07-29T17:03:48.447272+00:00", "category": "plan", "event": "QA_PLAN_CREATED", "run_id": "a07f5a20bf18", "question": "i am not sure what is the issue", "tool_choice": "NEITHER"}
+{"timestamp": "2026-07-29T17:03:48.449282+00:00", "category": "act", "event": "QA_TOOL_SELECTED", "run_id": "a07f5a20bf18", "tool": "NEITHER"}
+{"timestamp": "2026-07-29T17:03:52.252706+00:00", "category": "summary", "event": "QA_GROUNDING_PASSED", "run_id": "a07f5a20bf18", "stage": "qa_grounding", "retry_count": 0, "reason": "Every factual claim in the answer traces directly to the provided citations: the invoice amount ($42.50) is cited from INV-2024-0842, the contract ceiling ($38.00) is cited from apex_steel_contract::2, the PO approval ($38.00) is cited from PO-2024-1103, and the calculated difference ($4.50) is a valid arithmetic derivation from these cited figures."}
+{"timestamp": "2026-07-29T17:03:52.254212+00:00", "category": "summary", "event": "SUMMARY_GENERATED", "run_id": "a07f5a20bf18", "path": "qa"}
+{"timestamp": "2026-07-29T17:03:52.255221+00:00", "category": "summary", "event": "REPORT_FINALIZED", "run_id": "a07f5a20bf18", "invoice_id": "INV-2024-0842", "mode": "follow_up"}

@@ -1,0 +1,3 @@
+{"timestamp": "2026-07-29T15:04:49.641838+00:00", "category": "preconditions", "event": "INJECTION_CHECKED", "run_id": "smoke-test-precond-1", "channel": "chat", "score": 0.0}
+{"timestamp": "2026-07-29T15:04:50.942533+00:00", "category": "preconditions", "event": "MODE_DETECTED", "run_id": "smoke-test-precond-1", "mode": "audit", "invoice_id": null}
+{"timestamp": "2026-07-29T15:04:50.942533+00:00", "category": "preconditions", "event": "PRECONDITIONS_PASSED", "run_id": "smoke-test-precond-1", "mode": "audit", "invoice_id": null}

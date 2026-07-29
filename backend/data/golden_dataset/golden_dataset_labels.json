@@ -1,0 +1,142 @@
+[
+  {
+    "invoice_id": "INV-2024-1001",
+    "expected_fraud_type": "CLEAN",
+    "expected_flag": false,
+    "invoice_amount": 19000.0,
+    "ground_truth_notes": "All fields match PO, delivery, contract, and vendor master."
+  },
+  {
+    "invoice_id": "INV-2024-1002",
+    "expected_fraud_type": "CLEAN",
+    "expected_flag": false,
+    "invoice_amount": 10750.0,
+    "ground_truth_notes": "Above $10k policy threshold but properly single-invoiced; no anomaly."
+  },
+  {
+    "invoice_id": "INV-2024-1003",
+    "expected_fraud_type": "CLEAN",
+    "expected_flag": false,
+    "invoice_amount": 14500.0,
+    "ground_truth_notes": "Delivery and inspection confirmation both on file."
+  },
+  {
+    "invoice_id": "INV-2024-1004",
+    "expected_fraud_type": "CLEAN",
+    "expected_flag": false,
+    "invoice_amount": 2550.0,
+    "ground_truth_notes": "Clean baseline, second Apex line item type."
+  },
+  {
+    "invoice_id": "INV-2024-1005",
+    "expected_fraud_type": "CLEAN",
+    "expected_flag": false,
+    "invoice_amount": 1700.0,
+    "ground_truth_notes": "Clean baseline, low-value line item."
+  },
+  {
+    "invoice_id": "INV-2024-1006",
+    "expected_fraud_type": "CLEAN",
+    "expected_flag": false,
+    "invoice_amount": 3125.0,
+    "ground_truth_notes": "Clean baseline, second Meridian line item type."
+  },
+  {
+    "invoice_id": "INV-2024-0842",
+    "expected_fraud_type": "PRICE_INFLATION",
+    "expected_flag": true,
+    "invoice_amount": 21250.0,
+    "ground_truth_notes": "Contract ceiling is $38.00/unit; invoice bills $42.50 (+11.8%). Qty, delivery, vendor, bank all match."
+  },
+  {
+    "invoice_id": "INV-2024-2002",
+    "expected_fraud_type": "PRICE_INFLATION",
+    "expected_flag": true,
+    "invoice_amount": 12960.0,
+    "ground_truth_notes": "Contract ceiling is $145.00/unit; invoice bills $162.00 (+11.7%)."
+  },
+  {
+    "invoice_id": "INV-2024-3001",
+    "expected_fraud_type": "QUANTITY_MISMATCH",
+    "expected_flag": true,
+    "invoice_amount": 20900.0,
+    "ground_truth_notes": "PO approved 500 units, delivery confirms 500 received; invoice bills 550."
+  },
+  {
+    "invoice_id": "INV-2024-3002",
+    "expected_fraud_type": "QUANTITY_MISMATCH",
+    "expected_flag": true,
+    "invoice_amount": 25800.0,
+    "ground_truth_notes": "PO approved 10,000 units (contract cap), delivery confirms 10,000; invoice bills 12,000."
+  },
+  {
+    "invoice_id": "INV-2024-4001",
+    "expected_fraud_type": "PHANTOM_VENDOR",
+    "expected_flag": true,
+    "invoice_amount": 16500.0,
+    "ground_truth_notes": "Vendor not present in vendor_master.json; PO-2024-9001 does not exist in purchase_orders.json."
+  },
+  {
+    "invoice_id": "INV-2024-5001",
+    "expected_fraud_type": "NON_DELIVERY",
+    "expected_flag": true,
+    "invoice_amount": 5880.0,
+    "ground_truth_notes": "PO exists and is approved, but no delivery record and no inspection confirmation on file."
+  },
+  {
+    "invoice_id": "INV-2024-5002",
+    "expected_fraud_type": "NON_DELIVERY",
+    "expected_flag": true,
+    "invoice_amount": 8850.0,
+    "ground_truth_notes": "PO exists and is approved, but no delivery confirmation record exists."
+  },
+  {
+    "invoice_id": "INV-2024-6001",
+    "expected_fraud_type": "ALTERED_BANK_DETAILS",
+    "expected_flag": true,
+    "invoice_amount": 15200.0,
+    "ground_truth_notes": "Price/qty/delivery all match. Invoice lists account ending 2290; vendor master has 7734 on file."
+  },
+  {
+    "invoice_id": "INV-2024-6002",
+    "expected_fraud_type": "ALTERED_BANK_DETAILS",
+    "expected_flag": true,
+    "invoice_amount": 5800.0,
+    "ground_truth_notes": "Price/qty/delivery/inspection all match. Invoice lists account ending 5567; vendor master has 9012."
+  },
+  {
+    "invoice_id": "INV-2024-7001",
+    "expected_fraud_type": "CLEAN",
+    "expected_flag": false,
+    "invoice_amount": 12900.0,
+    "ground_truth_notes": "Legitimate original invoice. Already marked 'paid' in invoice_tracking.json before INV-2024-7002 arrives."
+  },
+  {
+    "invoice_id": "INV-2024-7002",
+    "expected_fraud_type": "DUPLICATE_BILLING",
+    "expected_flag": true,
+    "invoice_amount": 12900.0,
+    "ground_truth_notes": "Different invoice number, but identical vendor+PO+amount to INV-2024-7001, submitted 4 days later."
+  },
+  {
+    "invoice_id": "INV-2024-8001",
+    "expected_fraud_type": "SPLIT_INVOICING",
+    "expected_flag": true,
+    "invoice_amount": 9500.0,
+    "ground_truth_notes": "Part 1 of 2. Individually under the $10k secondary-approval threshold."
+  },
+  {
+    "invoice_id": "INV-2024-8002",
+    "expected_fraud_type": "SPLIT_INVOICING",
+    "expected_flag": true,
+    "invoice_amount": 9500.0,
+    "ground_truth_notes": "Part 2 of 2, same vendor, same day as INV-2024-8001. Combined value $19,000 exceeds the $10k threshold."
+  },
+  {
+    "invoice_id": "INV-2024-9001",
+    "expected_fraud_type": "PO_EXCEEDS_CONTRACT_CEILING",
+    "expected_flag": true,
+    "invoice_amount": 2400.0,
+    "ground_truth_notes": "Invoice matches PO exactly (no invoice-vs-PO anomaly), but PO itself was raised at $2.40/unit, above the $2.15 contract ceiling."
+  }
+]

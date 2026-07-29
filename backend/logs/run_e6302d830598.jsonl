@@ -1,0 +1,8 @@
+{"timestamp": "2026-07-29T16:24:11.878322+00:00", "category": "preconditions", "event": "INJECTION_CHECKED", "run_id": "e6302d830598", "channel": "chat", "score": 0.0}
+{"timestamp": "2026-07-29T16:24:12.512241+00:00", "category": "preconditions", "event": "MODE_DETECTED", "run_id": "e6302d830598", "mode": "follow_up", "invoice_id": "INV-2024-6001"}
+{"timestamp": "2026-07-29T16:24:12.513237+00:00", "category": "preconditions", "event": "PRECONDITIONS_PASSED", "run_id": "e6302d830598", "mode": "follow_up", "invoice_id": "INV-2024-6001"}
+{"timestamp": "2026-07-29T16:24:14.275479+00:00", "category": "plan", "event": "QA_PLAN_CREATED", "run_id": "e6302d830598", "question": "Why was this flagged?", "tool_choice": "STORAGE"}
+{"timestamp": "2026-07-29T16:24:14.277480+00:00", "category": "act", "event": "QA_TOOL_SELECTED", "run_id": "e6302d830598", "tool": "STORAGE"}
+{"timestamp": "2026-07-29T16:24:17.512939+00:00", "category": "summary", "event": "QA_GROUNDING_PASSED", "run_id": "e6302d830598", "stage": "qa_grounding", "retry_count": 0, "reason": "All key claims in the answer are directly supported by citations: the vendor master record ending in 7734 is cited to VEND-1001, the invoice account ending in 2290 is cited to INV-2024-6001, and the mismatch between these accounts is clearly evident from comparing the two sources."}
+{"timestamp": "2026-07-29T16:24:17.513975+00:00", "category": "summary", "event": "SUMMARY_GENERATED", "run_id": "e6302d830598", "path": "qa"}
+{"timestamp": "2026-07-29T16:24:17.516939+00:00", "category": "summary", "event": "REPORT_FINALIZED", "run_id": "e6302d830598", "invoice_id": "INV-2024-6001", "mode": "follow_up"}

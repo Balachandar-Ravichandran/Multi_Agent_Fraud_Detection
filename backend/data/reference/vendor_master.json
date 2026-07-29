@@ -1,0 +1,23 @@
+[
+  {
+    "vendor_id": "VEND-1001",
+    "name": "Apex Steel Components Ltd.",
+    "status": "Approved",
+    "bank_account_last4": "7734",
+    "contract_id": "CNT-APEX-2024"
+  },
+  {
+    "vendor_id": "VEND-1002",
+    "name": "Boltcraft Supplies Inc.",
+    "status": "Approved",
+    "bank_account_last4": "4410",
+    "contract_id": "CNT-BOLT-2024"
+  },
+  {
+    "vendor_id": "VEND-1003",
+    "name": "Meridian Electronics Corp.",
+    "status": "Approved",
+    "bank_account_last4": "9012",
+    "contract_id": "CNT-MER-2024"
+  }
+]

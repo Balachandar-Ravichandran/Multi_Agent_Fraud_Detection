@@ -1,0 +1,165 @@
+[
+  {
+    "po_number": "PO-2024-1101",
+    "vendor_id": "VEND-1001",
+    "item_description": "Grade-A Steel Brackets",
+    "quantity_approved": 500,
+    "unit_price_approved": 38.0,
+    "approver": "J. Alvarez",
+    "po_date": "2024-02-20"
+  },
+  {
+    "po_number": "PO-2024-1102",
+    "vendor_id": "VEND-1001",
+    "item_description": "Reinforcement Rods (10mm)",
+    "quantity_approved": 200,
+    "unit_price_approved": 12.75,
+    "approver": "J. Alvarez",
+    "po_date": "2024-02-22"
+  },
+  {
+    "po_number": "PO-2024-1103",
+    "vendor_id": "VEND-1001",
+    "item_description": "Grade-A Steel Brackets",
+    "quantity_approved": 500,
+    "unit_price_approved": 38.0,
+    "approver": "J. Alvarez",
+    "po_date": "2024-03-01"
+  },
+  {
+    "po_number": "PO-2024-1104",
+    "vendor_id": "VEND-1001",
+    "item_description": "Grade-A Steel Brackets",
+    "quantity_approved": 500,
+    "unit_price_approved": 38.0,
+    "approver": "J. Alvarez",
+    "po_date": "2024-03-05"
+  },
+  {
+    "po_number": "PO-2024-1105",
+    "vendor_id": "VEND-1001",
+    "item_description": "Grade-B Steel Brackets",
+    "quantity_approved": 300,
+    "unit_price_approved": 29.5,
+    "approver": "J. Alvarez",
+    "po_date": "2024-03-06"
+  },
+  {
+    "po_number": "PO-2024-1106",
+    "vendor_id": "VEND-1001",
+    "item_description": "Grade-A Steel Brackets",
+    "quantity_approved": 400,
+    "unit_price_approved": 38.0,
+    "approver": "J. Alvarez",
+    "po_date": "2024-03-07"
+  },
+  {
+    "po_number": "PO-2024-1108",
+    "vendor_id": "VEND-1001",
+    "item_description": "Grade-A Steel Brackets",
+    "quantity_approved": 250,
+    "unit_price_approved": 38.0,
+    "approver": "J. Alvarez",
+    "po_date": "2024-03-28"
+  },
+  {
+    "po_number": "PO-2024-1109",
+    "vendor_id": "VEND-1001",
+    "item_description": "Grade-A Steel Brackets",
+    "quantity_approved": 250,
+    "unit_price_approved": 38.0,
+    "approver": "J. Alvarez",
+    "po_date": "2024-03-28"
+  },
+  {
+    "po_number": "PO-2024-1201",
+    "vendor_id": "VEND-1002",
+    "item_description": "Industrial Bolts (M12)",
+    "quantity_approved": 5000,
+    "unit_price_approved": 2.15,
+    "approver": "M. Chen",
+    "po_date": "2024-02-25"
+  },
+  {
+    "po_number": "PO-2024-1202",
+    "vendor_id": "VEND-1002",
+    "item_description": "Hex Nuts (M12)",
+    "quantity_approved": 2000,
+    "unit_price_approved": 0.85,
+    "approver": "M. Chen",
+    "po_date": "2024-02-26"
+  },
+  {
+    "po_number": "PO-2024-1203",
+    "vendor_id": "VEND-1002",
+    "item_description": "Industrial Bolts (M12)",
+    "quantity_approved": 10000,
+    "unit_price_approved": 2.15,
+    "approver": "M. Chen",
+    "po_date": "2024-03-10"
+  },
+  {
+    "po_number": "PO-2024-1204",
+    "vendor_id": "VEND-1002",
+    "item_description": "Industrial Bolts (M12)",
+    "quantity_approved": 6000,
+    "unit_price_approved": 2.15,
+    "approver": "M. Chen",
+    "po_date": "2024-03-18"
+  },
+  {
+    "po_number": "PO-2024-1205",
+    "vendor_id": "VEND-1002",
+    "item_description": "Industrial Bolts (M12)",
+    "quantity_approved": 1000,
+    "unit_price_approved": 2.4,
+    "approver": "M. Chen",
+    "po_date": "2024-03-30",
+    "note": "Approved above contract ceiling - internal control failure, not vendor fraud."
+  },
+  {
+    "po_number": "PO-2024-1301",
+    "vendor_id": "VEND-1003",
+    "item_description": "Control Module (Type-C)",
+    "quantity_approved": 100,
+    "unit_price_approved": 145.0,
+    "approver": "R. Osei",
+    "po_date": "2024-03-01"
+  },
+  {
+    "po_number": "PO-2024-1302",
+    "vendor_id": "VEND-1003",
+    "item_description": "Sensor Assembly (Standard)",
+    "quantity_approved": 50,
+    "unit_price_approved": 62.5,
+    "approver": "R. Osei",
+    "po_date": "2024-03-02"
+  },
+  {
+    "po_number": "PO-2024-1303",
+    "vendor_id": "VEND-1003",
+    "item_description": "Control Module (Type-C)",
+    "quantity_approved": 80,
+    "unit_price_approved": 145.0,
+    "approver": "R. Osei",
+    "po_date": "2024-03-10"
+  },
+  {
+    "po_number": "PO-2024-1304",
+    "vendor_id": "VEND-1003",
+    "item_description": "Sensor Assembly (High-Precision)",
+    "quantity_approved": 60,
+    "unit_price_approved": 98.0,
+    "approver": "R. Osei",
+    "po_date": "2024-03-15"
+  },
+  {
+    "po_number": "PO-2024-1305",
+    "vendor_id": "VEND-1003",
+    "item_description": "Control Module (Type-C)",
+    "quantity_approved": 40,
+    "unit_price_approved": 145.0,
+    "approver": "R. Osei",
+    "po_date": "2024-03-18"
+  }
+]

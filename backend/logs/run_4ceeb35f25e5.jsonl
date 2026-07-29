@@ -1,0 +1,8 @@
+{"timestamp": "2026-07-29T16:21:11.182809+00:00", "category": "preconditions", "event": "INJECTION_CHECKED", "run_id": "4ceeb35f25e5", "channel": "chat", "score": 0.0}
+{"timestamp": "2026-07-29T16:21:11.985475+00:00", "category": "preconditions", "event": "MODE_DETECTED", "run_id": "4ceeb35f25e5", "mode": "follow_up", "invoice_id": "INV-2024-0842"}
+{"timestamp": "2026-07-29T16:21:11.986478+00:00", "category": "preconditions", "event": "PRECONDITIONS_PASSED", "run_id": "4ceeb35f25e5", "mode": "follow_up", "invoice_id": "INV-2024-0842"}
+{"timestamp": "2026-07-29T16:21:13.820646+00:00", "category": "plan", "event": "QA_PLAN_CREATED", "run_id": "4ceeb35f25e5", "question": "Which contract clause did the price ceiling come from, and what is the ceiling amount?", "tool_choice": "RAG"}
+{"timestamp": "2026-07-29T16:21:13.822548+00:00", "category": "act", "event": "QA_TOOL_SELECTED", "run_id": "4ceeb35f25e5", "tool": "RAG"}
+{"timestamp": "2026-07-29T16:21:17.061543+00:00", "category": "summary", "event": "QA_GROUNDING_PASSED", "run_id": "4ceeb35f25e5", "stage": "qa_grounding", "retry_count": 0, "reason": "All three claims trace to citations: the price ceiling source is cited to apex_steel_contract::2, the $38.00 ceiling amount is supported by that same contract excerpt, and the invoice overcharge of $42.50 is supported by INV-2024-0842."}
+{"timestamp": "2026-07-29T16:21:17.062671+00:00", "category": "summary", "event": "SUMMARY_GENERATED", "run_id": "4ceeb35f25e5", "path": "qa"}
+{"timestamp": "2026-07-29T16:21:17.069870+00:00", "category": "summary", "event": "REPORT_FINALIZED", "run_id": "4ceeb35f25e5", "invoice_id": "INV-2024-0842", "mode": "follow_up"}

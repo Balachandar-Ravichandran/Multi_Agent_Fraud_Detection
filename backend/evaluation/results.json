@@ -1,0 +1,537 @@
+{
+  "run_id": "golden_set_eval",
+  "total_invoices": 20,
+  "correct": 20,
+  "confusion_matrix": {
+    "CLEAN": {
+      "CLEAN": 7,
+      "PRICE_INFLATION": 0,
+      "QUANTITY_MISMATCH": 0,
+      "PHANTOM_VENDOR": 0,
+      "NON_DELIVERY": 0,
+      "ALTERED_BANK_DETAILS": 0,
+      "DUPLICATE_BILLING": 0,
+      "SPLIT_INVOICING": 0,
+      "PO_EXCEEDS_CONTRACT_CEILING": 0
+    },
+    "PRICE_INFLATION": {
+      "PRICE_INFLATION": 2,
+      "CLEAN": 0,
+      "QUANTITY_MISMATCH": 0,
+      "PHANTOM_VENDOR": 0,
+      "NON_DELIVERY": 0,
+      "ALTERED_BANK_DETAILS": 0,
+      "DUPLICATE_BILLING": 0,
+      "SPLIT_INVOICING": 0,
+      "PO_EXCEEDS_CONTRACT_CEILING": 0
+    },
+    "QUANTITY_MISMATCH": {
+      "QUANTITY_MISMATCH": 2,
+      "CLEAN": 0,
+      "PRICE_INFLATION": 0,
+      "PHANTOM_VENDOR": 0,
+      "NON_DELIVERY": 0,
+      "ALTERED_BANK_DETAILS": 0,
+      "DUPLICATE_BILLING": 0,
+      "SPLIT_INVOICING": 0,
+      "PO_EXCEEDS_CONTRACT_CEILING": 0
+    },
+    "PHANTOM_VENDOR": {
+      "PHANTOM_VENDOR": 1,
+      "CLEAN": 0,
+      "PRICE_INFLATION": 0,
+      "QUANTITY_MISMATCH": 0,
+      "NON_DELIVERY": 0,
+      "ALTERED_BANK_DETAILS": 0,
+      "DUPLICATE_BILLING": 0,
+      "SPLIT_INVOICING": 0,
+      "PO_EXCEEDS_CONTRACT_CEILING": 0
+    },
+    "NON_DELIVERY": {
+      "NON_DELIVERY": 2,
+      "CLEAN": 0,
+      "PRICE_INFLATION": 0,
+      "QUANTITY_MISMATCH": 0,
+      "PHANTOM_VENDOR": 0,
+      "ALTERED_BANK_DETAILS": 0,
+      "DUPLICATE_BILLING": 0,
+      "SPLIT_INVOICING": 0,
+      "PO_EXCEEDS_CONTRACT_CEILING": 0
+    },
+    "ALTERED_BANK_DETAILS": {
+      "ALTERED_BANK_DETAILS": 2,
+      "CLEAN": 0,
+      "PRICE_INFLATION": 0,
+      "QUANTITY_MISMATCH": 0,
+      "PHANTOM_VENDOR": 0,
+      "NON_DELIVERY": 0,
+      "DUPLICATE_BILLING": 0,
+      "SPLIT_INVOICING": 0,
+      "PO_EXCEEDS_CONTRACT_CEILING": 0
+    },
+    "DUPLICATE_BILLING": {
+      "DUPLICATE_BILLING": 1,
+      "CLEAN": 0,
+      "PRICE_INFLATION": 0,
+      "QUANTITY_MISMATCH": 0,
+      "PHANTOM_VENDOR": 0,
+      "NON_DELIVERY": 0,
+      "ALTERED_BANK_DETAILS": 0,
+      "SPLIT_INVOICING": 0,
+      "PO_EXCEEDS_CONTRACT_CEILING": 0
+    },
+    "SPLIT_INVOICING": {
+      "SPLIT_INVOICING": 2,
+      "CLEAN": 0,
+      "PRICE_INFLATION": 0,
+      "QUANTITY_MISMATCH": 0,
+      "PHANTOM_VENDOR": 0,
+      "NON_DELIVERY": 0,
+      "ALTERED_BANK_DETAILS": 0,
+      "DUPLICATE_BILLING": 0,
+      "PO_EXCEEDS_CONTRACT_CEILING": 0
+    },
+    "PO_EXCEEDS_CONTRACT_CEILING": {
+      "PO_EXCEEDS_CONTRACT_CEILING": 1,
+      "CLEAN": 0,
+      "PRICE_INFLATION": 0,
+      "QUANTITY_MISMATCH": 0,
+      "PHANTOM_VENDOR": 0,
+      "NON_DELIVERY": 0,
+      "ALTERED_BANK_DETAILS": 0,
+      "DUPLICATE_BILLING": 0,
+      "SPLIT_INVOICING": 0
+    }
+  },
+  "per_fraud_type": {
+    "CLEAN": {
+      "tp": 7,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "PRICE_INFLATION": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "QUANTITY_MISMATCH": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "PHANTOM_VENDOR": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "NON_DELIVERY": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "ALTERED_BANK_DETAILS": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "DUPLICATE_BILLING": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "SPLIT_INVOICING": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "PO_EXCEEDS_CONTRACT_CEILING": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0
+    }
+  },
+  "citation_validity_rate": 1.0,
+  "citations_checked": 27,
+  "check7_context_precision": 1.0,
+  "check7_context_recall": 1.0,
+  "per_invoice": [
+    {
+      "invoice_id": "INV-2024-1001",
+      "expected": "CLEAN",
+      "predicted": "CLEAN",
+      "correct": true,
+      "confidence": null,
+      "recommended_action": "none",
+      "gate_log": [
+        [
+          "post_classification",
+          true
+        ],
+        [
+          "post_summary",
+          true
+        ]
+      ]
+    },
+    {
+      "invoice_id": "INV-2024-1002",
+      "expected": "CLEAN",
+      "predicted": "CLEAN",
+      "correct": true,
+      "confidence": null,
+      "recommended_action": "none",
+      "gate_log": [
+        [
+          "post_classification",
+          true
+        ],
+        [
+          "post_summary",
+          true
+        ]
+      ]
+    },
+    {
+      "invoice_id": "INV-2024-1003",
+      "expected": "CLEAN",
+      "predicted": "CLEAN",
+      "correct": true,
+      "confidence": null,
+      "recommended_action": "none",
+      "gate_log": [
+        [
+          "post_classification",
+          true
+        ],
+        [
+          "post_summary",
+          true
+        ]
+      ]
+    },
+    {
+      "invoice_id": "INV-2024-1004",
+      "expected": "CLEAN",
+      "predicted": "CLEAN",
+      "correct": true,
+      "confidence": null,
+      "recommended_action": "none",
+      "gate_log": [
+        [
+          "post_classification",
+          true
+        ],
+        [
+          "post_summary",
+          true
+        ]
+      ]
+    },
+    {
+      "invoice_id": "INV-2024-1005",
+      "expected": "CLEAN",
+      "predicted": "CLEAN",
+      "correct": true,
+      "confidence": null,
+      "recommended_action": "none",
+      "gate_log": [
+        [
+          "post_classification",
+          true
+        ],
+        [
+          "post_summary",
+          true
+        ]
+      ]
+    },
+    {
+      "invoice_id": "INV-2024-1006",
+      "expected": "CLEAN",
+      "predicted": "CLEAN",
+      "correct": true,
+      "confidence": null,
+      "recommended_action": "none",
+      "gate_log": [
+        [
+          "post_classification",
+          true
+        ],
+        [
+          "post_summary",
+          true
+        ]
+      ]
+    },
+    {
+      "invoice_id": "INV-2024-0842",
+      "expected": "PRICE_INFLATION",
+      "predicted": "PRICE_INFLATION",
+      "correct": true,
+      "confidence": 0.7266,
+      "recommended_action": "human_review",
+      "gate_log": [
+        [
+          "post_classification",
+          true
+        ],
+        [
+          "post_summary",
+          true
+        ]
+      ]
+    },
+    {
+      "invoice_id": "INV-2024-2002",
+      "expected": "PRICE_INFLATION",
+      "predicted": "PRICE_INFLATION",
+      "correct": true,
+      "confidence": 0.7255,
+      "recommended_action": "human_review",
+      "gate_log": [
+        [
+          "post_classification",
+          true
+        ],
+        [
+          "post_summary",
+          true
+        ]
+      ]
+    },
+    {
+      "invoice_id": "INV-2024-3001",
+      "expected": "QUANTITY_MISMATCH",
+      "predicted": "QUANTITY_MISMATCH",
+      "correct": true,
+      "confidence": null,
+      "recommended_action": "auto_flagged",
+      "gate_log": [
+        [
+          "post_classification",
+          false
+        ],
+        [
+          "post_summary",
+          false
+        ]
+      ]
+    },
+    {
+      "invoice_id": "INV-2024-3002",
+      "expected": "QUANTITY_MISMATCH",
+      "predicted": "QUANTITY_MISMATCH",
+      "correct": true,
+      "confidence": null,
+      "recommended_action": "auto_flagged",
+      "gate_log": [
+        [
+          "post_classification",
+          false
+        ],
+        [
+          "post_summary",
+          false
+        ]
+      ]
+    },
+    {
+      "invoice_id": "INV-2024-4001",
+      "expected": "PHANTOM_VENDOR",
+      "predicted": "PHANTOM_VENDOR",
+      "correct": true,
+      "confidence": null,
+      "recommended_action": "auto_flagged",
+      "gate_log": [
+        [
+          "post_classification",
+          true
+        ],
+        [
+          "post_summary",
+          true
+        ]
+      ]
+    },
+    {
+      "invoice_id": "INV-2024-5001",
+      "expected": "NON_DELIVERY",
+      "predicted": "NON_DELIVERY",
+      "correct": true,
+      "confidence": null,
+      "recommended_action": "auto_flagged",
+      "gate_log": [
+        [
+          "post_classification",
+          false
+        ],
+        [
+          "post_summary",
+          true
+        ]
+      ]
+    },
+    {
+      "invoice_id": "INV-2024-5002",
+      "expected": "NON_DELIVERY",
+      "predicted": "NON_DELIVERY",
+      "correct": true,
+      "confidence": null,
+      "recommended_action": "auto_flagged",
+      "gate_log": [
+        [
+          "post_classification",
+          true
+        ],
+        [
+          "post_summary",
+          true
+        ]
+      ]
+    },
+    {
+      "invoice_id": "INV-2024-6001",
+      "expected": "ALTERED_BANK_DETAILS",
+      "predicted": "ALTERED_BANK_DETAILS",
+      "correct": true,
+      "confidence": null,
+      "recommended_action": "auto_flagged",
+      "gate_log": [
+        [
+          "post_classification",
+          true
+        ],
+        [
+          "post_summary",
+          true
+        ]
+      ]
+    },
+    {
+      "invoice_id": "INV-2024-6002",
+      "expected": "ALTERED_BANK_DETAILS",
+      "predicted": "ALTERED_BANK_DETAILS",
+      "correct": true,
+      "confidence": null,
+      "recommended_action": "auto_flagged",
+      "gate_log": [
+        [
+          "post_classification",
+          false
+        ],
+        [
+          "post_summary",
+          true
+        ]
+      ]
+    },
+    {
+      "invoice_id": "INV-2024-7001",
+      "expected": "CLEAN",
+      "predicted": "CLEAN",
+      "correct": true,
+      "confidence": null,
+      "recommended_action": "none",
+      "gate_log": [
+        [
+          "post_classification",
+          true
+        ],
+        [
+          "post_summary",
+          false
+        ]
+      ]
+    },
+    {
+      "invoice_id": "INV-2024-7002",
+      "expected": "DUPLICATE_BILLING",
+      "predicted": "DUPLICATE_BILLING",
+      "correct": true,
+      "confidence": null,
+      "recommended_action": "auto_flagged",
+      "gate_log": [
+        [
+          "post_classification",
+          false
+        ],
+        [
+          "post_summary",
+          true
+        ]
+      ]
+    },
+    {
+      "invoice_id": "INV-2024-8001",
+      "expected": "SPLIT_INVOICING",
+      "predicted": "SPLIT_INVOICING",
+      "correct": true,
+      "confidence": null,
+      "recommended_action": "auto_flagged",
+      "gate_log": [
+        [
+          "post_classification",
+          false
+        ],
+        [
+          "post_summary",
+          false
+        ]
+      ]
+    },
+    {
+      "invoice_id": "INV-2024-8002",
+      "expected": "SPLIT_INVOICING",
+      "predicted": "SPLIT_INVOICING",
+      "correct": true,
+      "confidence": null,
+      "recommended_action": "auto_flagged",
+      "gate_log": [
+        [
+          "post_classification",
+          true
+        ],
+        [
+          "post_summary",
+          false
+        ]
+      ]
+    },
+    {
+      "invoice_id": "INV-2024-9001",
+      "expected": "PO_EXCEEDS_CONTRACT_CEILING",
+      "predicted": "PO_EXCEEDS_CONTRACT_CEILING",
+      "correct": true,
+      "confidence": 0.7246,
+      "recommended_action": "human_review",
+      "gate_log": [
+        [
+          "post_classification",
+          true
+        ],
+        [
+          "post_summary",
+          true
+        ]
+      ]
+    }
+  ]
+}

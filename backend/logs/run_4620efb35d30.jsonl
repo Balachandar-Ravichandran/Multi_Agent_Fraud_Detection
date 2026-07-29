@@ -1,0 +1,5 @@
+{"timestamp": "2026-07-29T15:40:42.029983+00:00", "category": "preconditions", "event": "INJECTION_CHECKED", "run_id": "4620efb35d30", "channel": "document", "score": 0.0}
+{"timestamp": "2026-07-29T15:40:42.031001+00:00", "category": "preconditions", "event": "INJECTION_CHECKED", "run_id": "4620efb35d30", "channel": "chat", "score": 0.0}
+{"timestamp": "2026-07-29T15:40:43.496445+00:00", "category": "preconditions", "event": "MODE_DETECTED", "run_id": "4620efb35d30", "mode": "audit", "invoice_id": ""}
+{"timestamp": "2026-07-29T15:40:43.497447+00:00", "category": "preconditions", "event": "PRECONDITIONS_PASSED", "run_id": "4620efb35d30", "mode": "audit", "invoice_id": ""}
+{"timestamp": "2026-07-29T15:40:43.498448+00:00", "category": "plan", "event": "PLAN_CREATED", "run_id": "4620efb35d30", "jobs": ["vendor_po_validity", "bank_account_match", "quantity_check", "delivery_inspection", "duplicate_billing", "split_invoicing", "price_po_contract"]}

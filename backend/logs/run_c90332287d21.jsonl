@@ -1,0 +1,8 @@
+{"timestamp": "2026-07-29T17:08:56.990417+00:00", "category": "preconditions", "event": "INJECTION_CHECKED", "run_id": "c90332287d21", "channel": "chat", "score": 0.0}
+{"timestamp": "2026-07-29T17:08:57.881817+00:00", "category": "preconditions", "event": "MODE_DETECTED", "run_id": "c90332287d21", "mode": "follow_up", "invoice_id": "INV-2024-1001"}
+{"timestamp": "2026-07-29T17:08:57.894417+00:00", "category": "preconditions", "event": "PRECONDITIONS_PASSED", "run_id": "c90332287d21", "mode": "follow_up", "invoice_id": "INV-2024-1001"}
+{"timestamp": "2026-07-29T17:09:00.203173+00:00", "category": "plan", "event": "QA_PLAN_CREATED", "run_id": "c90332287d21", "question": "can you list the invoice that was clean and approved till now", "tool_choice": "STORAGE"}
+{"timestamp": "2026-07-29T17:09:00.205706+00:00", "category": "act", "event": "QA_TOOL_SELECTED", "run_id": "c90332287d21", "tool": "STORAGE"}
+{"timestamp": "2026-07-29T17:09:03.788066+00:00", "category": "summary", "event": "QA_GROUNDING_PASSED", "run_id": "c90332287d21", "stage": "qa_grounding", "retry_count": 0, "reason": "All factual claims in the answer are supported by the provided citations: Apex Steel Components Ltd.'s approval status and bank account ending are cited from the vendor master, while the purchase order details (item, quantity, and unit price) are cited from PO-2024-1101."}
+{"timestamp": "2026-07-29T17:09:03.789091+00:00", "category": "summary", "event": "SUMMARY_GENERATED", "run_id": "c90332287d21", "path": "qa"}
+{"timestamp": "2026-07-29T17:09:03.791614+00:00", "category": "summary", "event": "REPORT_FINALIZED", "run_id": "c90332287d21", "invoice_id": "INV-2024-1001", "mode": "follow_up"}

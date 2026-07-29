@@ -1,0 +1,162 @@
+[
+  {
+    "invoice_id": "INV-2024-1001",
+    "vendor_id": "VEND-1001",
+    "po_reference": "PO-2024-1101",
+    "amount": 19000.0,
+    "date_received": "2024-03-05",
+    "status": "pending_review"
+  },
+  {
+    "invoice_id": "INV-2024-1002",
+    "vendor_id": "VEND-1002",
+    "po_reference": "PO-2024-1201",
+    "amount": 10750.0,
+    "date_received": "2024-03-06",
+    "status": "pending_review"
+  },
+  {
+    "invoice_id": "INV-2024-1003",
+    "vendor_id": "VEND-1003",
+    "po_reference": "PO-2024-1301",
+    "amount": 14500.0,
+    "date_received": "2024-03-07",
+    "status": "pending_review"
+  },
+  {
+    "invoice_id": "INV-2024-1004",
+    "vendor_id": "VEND-1001",
+    "po_reference": "PO-2024-1102",
+    "amount": 2550.0,
+    "date_received": "2024-03-08",
+    "status": "pending_review"
+  },
+  {
+    "invoice_id": "INV-2024-1005",
+    "vendor_id": "VEND-1002",
+    "po_reference": "PO-2024-1202",
+    "amount": 1700.0,
+    "date_received": "2024-03-09",
+    "status": "pending_review"
+  },
+  {
+    "invoice_id": "INV-2024-1006",
+    "vendor_id": "VEND-1003",
+    "po_reference": "PO-2024-1302",
+    "amount": 3125.0,
+    "date_received": "2024-03-10",
+    "status": "pending_review"
+  },
+  {
+    "invoice_id": "INV-2024-0842",
+    "vendor_id": "VEND-1001",
+    "po_reference": "PO-2024-1103",
+    "amount": 21250.0,
+    "date_received": "2024-03-15",
+    "status": "pending_review"
+  },
+  {
+    "invoice_id": "INV-2024-2002",
+    "vendor_id": "VEND-1003",
+    "po_reference": "PO-2024-1303",
+    "amount": 12960.0,
+    "date_received": "2024-03-16",
+    "status": "pending_review"
+  },
+  {
+    "invoice_id": "INV-2024-3001",
+    "vendor_id": "VEND-1001",
+    "po_reference": "PO-2024-1104",
+    "amount": 20900.0,
+    "date_received": "2024-03-18",
+    "status": "pending_review"
+  },
+  {
+    "invoice_id": "INV-2024-3002",
+    "vendor_id": "VEND-1002",
+    "po_reference": "PO-2024-1203",
+    "amount": 25800.0,
+    "date_received": "2024-03-19",
+    "status": "pending_review"
+  },
+  {
+    "invoice_id": "INV-2024-4001",
+    "vendor_id": "VEND-9999",
+    "po_reference": "PO-2024-9001",
+    "amount": 16500.0,
+    "date_received": "2024-03-20",
+    "status": "pending_review"
+  },
+  {
+    "invoice_id": "INV-2024-5001",
+    "vendor_id": "VEND-1003",
+    "po_reference": "PO-2024-1304",
+    "amount": 5880.0,
+    "date_received": "2024-03-21",
+    "status": "pending_review"
+  },
+  {
+    "invoice_id": "INV-2024-5002",
+    "vendor_id": "VEND-1001",
+    "po_reference": "PO-2024-1105",
+    "amount": 8850.0,
+    "date_received": "2024-03-22",
+    "status": "pending_review"
+  },
+  {
+    "invoice_id": "INV-2024-6001",
+    "vendor_id": "VEND-1001",
+    "po_reference": "PO-2024-1106",
+    "amount": 15200.0,
+    "date_received": "2024-03-23",
+    "status": "pending_review"
+  },
+  {
+    "invoice_id": "INV-2024-6002",
+    "vendor_id": "VEND-1003",
+    "po_reference": "PO-2024-1305",
+    "amount": 5800.0,
+    "date_received": "2024-03-24",
+    "status": "pending_review"
+  },
+  {
+    "invoice_id": "INV-2024-7001",
+    "vendor_id": "VEND-1002",
+    "po_reference": "PO-2024-1204",
+    "amount": 12900.0,
+    "date_received": "2024-03-25",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-2024-7002",
+    "vendor_id": "VEND-1002",
+    "po_reference": "PO-2024-1204",
+    "amount": 12900.0,
+    "date_received": "2024-03-29",
+    "status": "pending_review"
+  },
+  {
+    "invoice_id": "INV-2024-8001",
+    "vendor_id": "VEND-1001",
+    "po_reference": "PO-2024-1108",
+    "amount": 9500.0,
+    "date_received": "2024-04-01",
+    "status": "pending_review"
+  },
+  {
+    "invoice_id": "INV-2024-8002",
+    "vendor_id": "VEND-1001",
+    "po_reference": "PO-2024-1109",
+    "amount": 9500.0,
+    "date_received": "2024-04-01",
+    "status": "pending_review"
+  },
+  {
+    "invoice_id": "INV-2024-9001",
+    "vendor_id": "VEND-1002",
+    "po_reference": "PO-2024-1205",
+    "amount": 2400.0,
+    "date_received": "2024-04-03",
+    "status": "pending_review"
+  }
+]
