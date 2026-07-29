@@ -1,0 +1,154 @@
+================================================================================
+AGENT GPA TEST QUESTIONS - QUICK REFERENCE
+================================================================================
+
+Copy-paste these questions into the chat UI to test Q&A Mode tool selection.
+
+================================================================================
+SET A: STORAGE ONLY (Vendor Master / Ledger)
+================================================================================
+
+A1. "Is Apex Steel still an active vendor in our system?"
+    Invoice: INV-2024-0842
+    Expected Tool: STORAGE
+    Expected Answer: Yes, Apex Steel (VEND-1001) is active. Bank on file: ends in 7734.
+
+A2. "What bank account does Apex Steel have on file vs. what's on this invoice?"
+    Invoice: INV-2024-6001
+    Expected Tool: STORAGE
+    Expected Answer: Vendor master: 7734. Invoice: 2290. Mismatch.
+
+A3. "Was PO-2024-0101 properly approved before this invoice arrived?"
+    Invoice: INV-2024-1001
+    Expected Tool: STORAGE
+    Expected Answer: Yes, approved 2026-04-01. 500 units at $38.00/unit. Total: $19,000.
+
+================================================================================
+SET B: RAG ONLY (Contract / Policy)
+================================================================================
+
+B1. "Does the Apex Steel contract allow any price increases above the base ceiling, and if so, by how much?"
+    Invoice: INV-2024-9103
+    Expected Tool: RAG
+    Expected Answer: Yes, 3% COLA allowed. Base $38.00, max $39.14.
+
+B2. "What does our procurement policy say about inspection requirements for high-value orders?"
+    Invoice: INV-2024-1003
+    Expected Tool: RAG
+    Expected Answer: Orders over $10k require documented delivery inspection before payment.
+
+B3. "How do the contract price ceilings compare between Apex Steel and Boltcraft?"
+    Invoice: INV-2024-1002
+    Expected Tool: RAG (multiple queries)
+    Expected Answer: Apex: $38.00/unit (3% COLA max). Boltcraft: $145.00/unit (no COLA).
+
+================================================================================
+SET C: BOTH (Vendor + Contract)
+================================================================================
+
+C1. "Is this invoice suspicious? Walk me through the vendor status, PO approval, and contract pricing."
+    Invoice: INV-2024-0842
+    Expected Tool: BOTH
+    Expected Answer: Vendor active. PO approved $38/unit. Invoice bills $42.50/unit. Price inflation.
+
+C2. "Why was this invoice flagged as duplicate billing? Check the vendor, the prior invoice, and contract terms."
+    Invoice: INV-2024-7002
+    Expected Tool: BOTH
+    Expected Answer: Same vendor, PO, amount as INV-2024-7001. Submitted 4 days later. No split policy.
+
+================================================================================
+SET D: EDGE CASES
+================================================================================
+
+D1. "What's the weather forecast for tomorrow?"
+    Invoice: INV-2024-1001 (any)
+    Expected Tool: NONE
+    Expected Answer: [Graceful refusal] Out of scope. Ask about invoice/vendor/contract data.
+
+D2. "Can the vendor change the delivery quantity after the PO is approved?"
+    Invoice: INV-2024-3002
+    Expected Tool: RAG + STORAGE
+    Expected Answer: Policy: No. This PO approved 10k units, delivery 10k, invoice 12k. Mismatch.
+
+D3. [CONSISTENCY TEST]
+    Question 1: "What is the contract ceiling for Apex Steel?"
+    Question 2: "What's the maximum price we should pay Apex?"
+    Expected Tool: RAG (both)
+    Expected: Answers should be identical/consistent across turns.
+
+D4. "Is this vendor's contract properly documented in our system?"
+    Invoice: INV-2024-4001 (PHANTOM_VENDOR)
+    Expected Tool: RAG (attempt lookup on non-existent vendor)
+    Expected Answer: Vendor VEND-9999 not found in contract database.
+
+================================================================================
+SCORING QUICK REFERENCE
+================================================================================
+
+4B Tool Selection (Expected vs Actual)
+  1.0: Correct tool chosen
+  0.5: Suboptimal but not wrong
+  0.0: Wrong tool
+
+5B Tool Calling (Parameter correctness)
+  1.0: Parameters valid, results returned
+  0.7: Parameters mostly valid, partial results
+  0.0: Parameters invalid, query failed
+
+1C Groundedness (Citation quality)
+  1.0: 3+ citations per claim
+  0.7: 1 citation per claim (minimum acceptable)
+  0.0: No citations, hallucination
+
+1A Answer Correctness (Fact accuracy)
+  1.0: All facts verified, complete
+  0.8: All facts correct, minor gaps
+  0.0: Wrong answer
+
+Overall Agent GPA = Average of 4 scores
+
+Target: 0.85+
+
+================================================================================
+MANUAL TEST WORKFLOW
+================================================================================
+
+1. Open chat UI (http://127.0.0.1:8001/)
+2. Upload one of the test invoices
+3. Ask one question from Set A, B, C, or D
+4. Observe which tool the system selects (watch the network tab or logs)
+5. Score the 4 dimensions using the rubric above
+6. Record results in a spreadsheet
+
+Example result for question A1:
+  Invoice: INV-2024-0842
+  Question: "Is Apex Steel still active?"
+  Tool Selected: STORAGE ✓
+  Tool Calling: Valid parameters (vendor_id=VEND-1001) ✓
+  Groundedness: Cited vendor_master row ✓
+  Correctness: "Active" matches reference data ✓
+  Scores: 4B=1.0, 5B=1.0, 1C=1.0, 1A=1.0
+  Agent GPA: 1.0
+
+================================================================================
+TESTING LOGISTICS
+================================================================================
+
+Invoices to upload (located in backend/data/golden_dataset/invoices/):
+  - INV-2024-1001.pdf (CLEAN)
+  - INV-2024-0842.pdf (PRICE_INFLATION)
+  - INV-2024-6001.pdf (ALTERED_BANK_DETAILS)
+  - INV-2024-3002.pdf (QUANTITY_MISMATCH)
+  - INV-2024-9103.pdf (PRICE_INFLATION - boundary test)
+  - INV-2024-7002.pdf (DUPLICATE_BILLING)
+  - INV-2024-4001.pdf (PHANTOM_VENDOR)
+
+Time estimate:
+  1 question: 30 seconds
+  Full set (12 questions): 6 minutes
+  Full set with detailed scoring: 15 minutes
+
+================================================================================
+Created: 2026-07-29
+Framework: Agent GPA
+System: Multi-Agent Procurement Fraud Detection
